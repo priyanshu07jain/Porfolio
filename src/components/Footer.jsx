@@ -8,7 +8,7 @@ const Footer = () => {
                     <div className="footer-brand">
                         <div className="footer-logo">
                             <div className="f-icon">C</div>
-                            Creative<span className="f-accent">Skool</span>
+                            POrfolio<span className="f-accent">Personal</span>
                         </div>
                         <p className="footer-tagline">
                             Master documentary-style editing and build a career
@@ -40,7 +40,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p className="footer-copy">
-                        © 2026 CreativeSkool. All rights reserved.
+                        © 2026 pjCreateInfinite. All rights reserved.
                     </p>
                     <div className="footer-socials">
                         <a href="#" className="social-link" aria-label="Instagram">
