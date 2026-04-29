@@ -1,0 +1,271 @@
+/* ═══════════════════════════════════════════════
+   CURRICULUM — Module cards + learning points
+   ═══════════════════════════════════════════════ */
+
+.curriculum-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.curriculum-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-default), transparent);
+}
+
+/* Module row */
+.module-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: stretch;
+    margin-bottom: 60px;
+}
+
+.module-row:last-child {
+    margin-bottom: 0;
+}
+
+.module-row.reversed {
+    direction: rtl;
+}
+
+.module-row.reversed>* {
+    direction: ltr;
+}
+
+/* Module visual card */
+.module-visual {
+    border-radius: var(--radius-xl);
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 380px;
+}
+
+.module-visual.theme-red {
+    background: linear-gradient(160deg, #b91c1c 0%, #7f1d1d 50%, #451a1a 100%);
+}
+
+.module-visual.theme-amber {
+    background: linear-gradient(160deg, #b45309 0%, #78350f 50%, #451a03 100%);
+}
+
+.module-visual.theme-emerald {
+    background: linear-gradient(160deg, #047857 0%, #064e3b 50%, #022c22 100%);
+}
+
+/* Large background number */
+.module-visual::after {
+    content: attr(data-number);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: 16rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.module-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    width: fit-content;
+    backdrop-filter: blur(8px);
+}
+
+.module-visual-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.module-visual-heading {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.module-visual-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.module-visual-desc em {
+    color: rgba(255, 255, 255, 0.55);
+    font-style: italic;
+}
+
+/* Skills tags */
+.skills-section {
+    margin-top: 24px;
+}
+
+.skills-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+.skill-tag .emoji {
+    font-size: 0.9rem;
+}
+
+/* Attribution */
+.module-attribution {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.module-attribution strong {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+}
+
+/* Module Info (right side) */
+.module-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.module-info .module-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-default);
+    color: var(--text-secondary);
+}
+
+.module-info-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* What you'll learn */
+.learn-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+}
+
+.learn-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+
+.learn-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.learn-check {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.learn-check svg {
+    width: 12px;
+    height: 12px;
+    color: white;
+}
+
+/* CTA in module */
+.module-cta {
+    align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .module-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .module-row.reversed {
+        direction: ltr;
+    }
+
+    .module-visual {
+        min-height: 320px;
+        padding: 30px 24px;
+    }
+
+    .module-visual-heading {
+        font-size: 2.2rem;
+    }
+
+    .module-visual::after {
+        font-size: 10rem;
+    }
+}

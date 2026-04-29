@@ -1,0 +1,2 @@
+/* index.css — only imports global reset/tokens */
+@import './styles/global.css';
